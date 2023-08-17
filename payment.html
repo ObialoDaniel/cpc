@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="style2.css">
+    <script type="text/javascript" src="payment.js"></script>
+    <script src="https://checkout.flutterwave.com/v3.js">  </script>
+    
+            <form method="POST" action="https://checkout.flutterwave.com/v3/hosted/pay">
+                <div>
+                  Your order is ₦3,400
+                </div>
+                <input type="hidden" name="public_key" value="FLWPUBK_TEST-a005cfa1113396a1223fa7a04e98d514-X" />
+                <input type="hidden" name="customer[email]" value="obialodaniel16@gmail.com" />
+                <input type="hidden" name="customer[name]" value="Obialo Daniel" />
+                <input type="hidden" name="tx_ref" value="bitethtx-019203" />
+                <input type="hidden" name="amount" value="3400" />
+                <input type="hidden" name="currency" value="NGN" />
+                <input type="hidden" name="meta[token]" value="54" />
+                <input type="hidden" name="redirect_url" value="https://cpc-project.000webhostapp.com/registry.html" />
+                <button type="submit" id="start-payment-button">Pay Now</button>
+            </form>
+            
+</body>
+</html>
